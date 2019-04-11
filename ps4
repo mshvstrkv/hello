@@ -1,0 +1,7 @@
+#!/bin/bash
+PS4=' $(date +\%D.\%T.\%-3N)::`basename $0` [$LINENO]: '
+set -x
+echo "Test PS4 script file"
+ls -la /bin | grep "name" | wc -l
+df -h /etc
+ps -ely | grep sh | wc -c
